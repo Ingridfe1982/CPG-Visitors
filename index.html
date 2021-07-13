@@ -17,7 +17,7 @@
         </header>
         <div class="columns">
             <div class="column">
-            <form class="box" >
+            <form class="box" method="post" action="label.php">
                 <!-- Se connecter à la webcam et capturer photo -->
                 <canvas id="canvas">
                     <img id="take-photo"  alt="photo apparaitra ici">
@@ -34,21 +34,21 @@
                 <div class="field">
                 <label class="label">Nom</label>
                 <div class="control">
-                    <input class="input is-normal" type="name" placeholder="Nom">
+                    <input class="input is-normal" type="text" placeholder="Nom" name="name">
                 </div>
                 </div>
             
                 <div class="field">
                 <label class="label">Prénom</label>
                 <div class="control">
-                    <input class="input is-normal" type="fname" placeholder="Prénom">
+                    <input class="input is-normal" type="text" placeholder="Prénom" name="fname">
                 </div>
                 </div>
 
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control">
-                    <input class="input is-normal" type="email" placeholder="example@mail.com">
+                    <input class="input is-normal" type="text" placeholder="example@mail.com" name="email" >
                     </div>
                 </div>
                 <p><strong>Raison de votre visite:</strong></p>
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <!--  au click -> envoyer les données vers bdd -->
-                <button class="button is-primary" method="post" action="label.php">Valider</button>
+                <button class="button is-primary" >Valider</button>
             </form>
         </div> 
         </div>
