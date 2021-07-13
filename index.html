@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js">
+    <script src="main.js"></script>
 </head>
 <body>
    <div class="content">
@@ -16,11 +17,15 @@
         </header>
         <div class="columns">
             <div class="column">
-            <form class="box">
-                <figure class="image is-128x128">
-                    <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                  </figure>
-                  <button class="button is-primary">Prendre la photo</button>
+            <form class="box" >
+                <!-- Se connecter à la webcam et capturer photo -->
+                <canvas id="canvas">
+                    <img id="take-photo"  alt="photo apparaitra ici">
+                </canvas>
+                <div class="camera" >
+                    <video id="video">Video stream not available.</video>
+                </div>
+                <button class="button is-primary">Prendre la photo</button>
             </form>
             </div>  
 
@@ -52,6 +57,7 @@
                     <div class="select is-fullwidth">
                         <select>
                           <option>Selectionner le cours</option>
+                        <!-- intégrer les données de l'api  à l'emplacement "option"-->
                           <option>options</option>
                         </select>
                       </div>   
@@ -60,11 +66,12 @@
                 <div class="field">
                     <label class="label">J'ai rdv avec</label>
                     <div class="control">
+                        <!-- autocomplétion depuis l'api -->
                         <input class="input is-normal" type="" placeholder="Saisir le nom">
                     </div>
                 </div>
-                
-                <button class="button is-primary">Valider</button>
+                <!--  au click -> envoyer les données vers bdd -->
+                <button class="button is-primary" method="post" action="label.php">Valider</button>
             </form>
         </div> 
         </div>
