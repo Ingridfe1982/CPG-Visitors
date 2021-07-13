@@ -4,14 +4,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPG-Visitors</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js">
 </head>
 <body>
    <div class="content">
     <div class="container">
-        <h1>Inscription</h1>
+        <header class="hero is-primary">
+        <h1>Registre visiteurs - Inscription</h1>
+        </header>
         <div class="columns">
             <div class="column">
             <form class="box">
@@ -22,7 +24,7 @@
             </form>
             </div>  
 
-            <div class="column">
+            <div class="column is-three-quarters">
             <form class="box">
                 <div class="field">
                 <label class="label">Nom</label>
@@ -44,9 +46,9 @@
                     <input class="input is-normal" type="email" placeholder="example@mail.com">
                     </div>
                 </div>
-
+                <p><strong>Raison de votre visite:</strong></p>
                 <div class="field">
-                    <label class="label">Je viens suivre un cours:</label>
+                    <label class="label">Je viens suivre un cours</label>
                     <div class="select is-fullwidth">
                         <select>
                           <option>Selectionner le cours</option>
@@ -56,9 +58,9 @@
                 </div>
 
                 <div class="field">
-                    <label class="label">J'ai rdv avec:</label>
+                    <label class="label">J'ai rdv avec</label>
                     <div class="control">
-                        <input class="input is-normal" type="" placeholder="Saisissez le nom">
+                        <input class="input is-normal" type="" placeholder="Saisir le nom">
                     </div>
                 </div>
                 
